@@ -1,0 +1,35 @@
+.g2-list-item-meta {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1;
+  font-size: 0;
+  .list-item-meta-avatar {
+    margin-right: 16px;
+  }
+
+  .list-item-meta-content {
+    flex: 1 0;
+  }
+
+  .list-item-meta-title {
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .list-item-meta-title > a {
+    color: rgba(0, 0, 0, 0.65);
+    transition: all 0.3s;
+  }
+
+  .list-item-meta-title > a:hover {
+    color: #1890ff;
+  }
+
+  .list-item-meta-description {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+@import '~@scss/themes/index.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+
+/*******************************
+          外边距
+*******************************/
+
+.g2-footer-absolute {
+  @include g2-border-top();
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.333333rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .g2-btn {
+    flex: 1 1 auto;
+    @include g2-border-right();
+    cursor: pointer;
+
+    &:last-child::after {
+      display: none;
+    }
+    .col-3 {
+      flex-basis: 33.33%;
+    }
+  }
+}
+
+.g2-btn {
+  flex: 1;
+  line-height: 1.333333rem;
+  display: block;
+  @include font-dpr(14px);
+  text-align: center;
+  position: relative;
+  color: #666;
+
+  &.is-primary {
+    background-color: $primary-6;
+    color: #fff;
+    &.is-plain {
+      color: $primary-6;
+      background-color: transparent;
+    }
+  }
+}

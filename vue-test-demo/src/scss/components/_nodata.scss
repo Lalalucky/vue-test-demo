@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+@import '~@scss/themes/index.scss';
+@import '~@scss/helpers/_text.scss';
+
+.g2-nodata {
+  text-align: center;
+  padding: 0.666667rem 0;
+  .g2-icon {
+    text-align: center;
+    height: 3.466667rem;
+    width: auto;
+    img {
+      width: auto;
+      height: 100%;
+      opacity: 0.4;
+    }
+  }
+
+  &.is-radius {
+    .g2-icon {
+      width: 3.466667rem;
+      margin: 0 auto;
+      img {
+        width: auto;
+        height: 80%;
+        border-radius: 50%;
+        opacity: 0.4;
+      }
+    }
+  }
+}

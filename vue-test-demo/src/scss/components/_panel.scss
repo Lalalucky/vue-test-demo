@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+@import '~@scss/themes/index.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+
+/*******************************
+          外边距
+*******************************/
+
+.g2-panel {
+  background-color: #fff;
+  position: relative;
+  &:before {
+    @include g2-set-line();
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $base--color-border;
+  }
+  &:after {
+    @include g2-set-line();
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid $base--color-border;
+  }
+
+  .panel-content.g2-list {
+    .list-item {
+      padding: 0.133333rem 0.266667rem;
+      @include g2-border-bottom();
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+}

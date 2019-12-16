@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+@import '~@scss/themes/index.scss';
+@import '~@scss/helpers/_text.scss';
+
+.g2-icon {
+  width: $icon--width;
+  height: $icon--width;
+  @include font-dpr(16px);
+
+  // 反色 即颜色为白色
+  &.is-inverse {
+    color: #fff;
+  }
+
+  &.is-large {
+    width: $icon--width * 1.5;
+    height: $icon--width * 1.5;
+    @include font-dpr(22px);
+  }
+  &.is-xs{
+    @include font-dpr(12px);
+
+  }
+}
