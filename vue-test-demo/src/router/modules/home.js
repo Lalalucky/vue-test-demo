@@ -8,8 +8,8 @@ export default {
 	name: 'home',
 	meta,
 	// authority: 'myManager',
-  // redirect: { name: 'my' },
-  component:() => import('@/pages/Home/index.vue'),
+	// redirect: { name: 'my' },
+	component: () => import('@/pages/Home/index.vue')
 	// children: (pre => [
 	// 	{
 	// 		path: '/home',

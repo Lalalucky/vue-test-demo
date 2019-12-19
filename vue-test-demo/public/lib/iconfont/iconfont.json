@@ -1,0 +1,37 @@
+{
+  "id": "1572742",
+  "name": "小小宇航员",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2921681",
+      "name": "首页 选中",
+      "font_class": "shouyexuanzhong",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "5927990",
+      "name": "通行证管理",
+      "font_class": "tonghangzhengguanli",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "9437148",
+      "name": "首页 未选中",
+      "font_class": "bianzux",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "10042159",
+      "name": "驾驶舱",
+      "font_class": "jiashicang",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    }
+  ]
+}

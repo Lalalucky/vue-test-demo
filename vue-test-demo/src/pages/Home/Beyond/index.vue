@@ -1,13 +1,11 @@
 <template>
-	<div class="home app-view">
-		<Beyond></Beyond>
-		<base-footer></base-footer>
+	<div class="beyond">
+		<banner-swiper></banner-swiper>
 	</div>
 </template>
 
 <script>
-import Beyond from './Beyond/index.vue';
-import baseFooter from '@/components/base-components/base-footer.vue';
+import bannerSwiper from '../components/HomeSwiper.vue';
 export default {
 	props: {},
 	data() {
@@ -19,8 +17,7 @@ export default {
 	watch: {},
 	methods: {},
 	components: {
-		Beyond,
-		baseFooter
+		bannerSwiper
 	}
 };
 </script>

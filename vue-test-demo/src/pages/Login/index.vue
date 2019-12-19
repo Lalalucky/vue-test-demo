@@ -1,54 +1,83 @@
 <template>
-	<div class="login-from">
-		<div class="from-item">
-			<div class="ipt">
-				<span>手机：</span>
-				<input type="text" v-model="userForm.phone" v-validate="'phone|required'" name="phone" />
+	<div class="wrapper yjz-home">
+		<div class="login-form">
+			<div class="form-item">
+				<div class="ipt">
+					<span>昵称：</span>
+					<input type="text" v-model="userForm.nickName" v-validate="'nickName'" name="nickName"/>
+				</div>
+				<span :class="{ input: true, 'is-danger': errors.has('nickName') }" v-show="errors.has('nickName')">
+					{{ errors.first('nickName') }}
+				</span>
 			</div>
-			<span :class="{ input: true, 'is-danger': errors.has('phone') }" v-show="errors.has('phone')">
-				{{ errors.first('phone') }}
-			</span>
-		</div>
-		<div class="from-item">
-			<div class="ipt">
-				<span>几个：</span>
-				<input type="text" v-model="userForm.No" v-validate="'required|between: 1,10'" />
+			<div class="form-item">
+				<div class="ipt">
+					<span>年级：</span>
+					<input type="text" v-model="userForm.No" v-validate="'No'" name="No"/>
+				</div>
+				<span :class="{ input: true, 'is-danger': errors.has('No') }" v-show="errors.has('No')">
+					{{ errors.first('No') }}
+				</span>
 			</div>
-			<span :class="{ input: true, 'is-danger': errors.has('between') }" v-show="errors.has('between')">
-				{{ errors.first('between') }}
-			</span>
+			<div class="form-item">
+				<div class="ipt">
+					<span>手机：</span>
+					<input type="text" v-model="userForm.phone" v-validate="'phone'" name="phone" />
+				</div>
+				<span :class="{ input: true, 'is-danger': errors.has('phone') }" v-show="errors.has('phone')">
+					{{ errors.first('phone') }}
+				</span>
+			</div>
+			<div class="form-item">
+				<div class="ipt">
+					<span>邮箱：</span>
+					<input type="text" v-model="userForm.email" v-validate="'email'" name="email" />
+				</div>
+				<span :class="{ input: true, 'is-danger': errors.has('email') }" v-show="errors.has('email')">
+					{{ errors.first('email') }}
+				</span>
+			</div>
+			<!-- 提交 -->
+			<div class="form-item">
+				<base-button type="primary" @click.native="loginFn">
+					<span slot="text" class="btn-text">确定</span>
+				</base-button>
+			</div>
 		</div>
-    <!-- 提交 -->
-    <Button>提交</Button>
 	</div>
 </template>
 
 <script>
-import Button from 'vant/lib/button';
-import 'vant/lib/button/style';
+import baseButton from '@/components/base-components/button.vue';
 export default {
-	props: {},
 	data() {
 		return {
 			userForm: {
-        phone: '',
-        No:'',
+				phone: '',
+				No: '',
 				nickName: '',
 				mail: '',
-				password: '',
 				role: ''
 			}
 		};
 	},
 	computed: {},
 	mounted() {},
-	methods: {},
+	methods: {
+		async loginFn() {
+			// let { phone, No, nickName, mail } = this;
+			const success = await this.$validator.validateAll(['phone','email']); // 对所有表单项进行验证
+			if(success){
+				this.$router.push({
+					path:'/home'
+				})
+			}
+		}
+	},
 	components: {
-    Button
-  }
+		baseButton
+	}
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss" src="./index.scss"></style>

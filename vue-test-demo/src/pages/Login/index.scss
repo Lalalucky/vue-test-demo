@@ -1,0 +1,28 @@
+@import '@/scss/index.scss';
+.wrapper {
+	.login-form {
+		font-size: 0.213333rem;
+		margin-top: 6rem;
+		.form-item {
+			padding: 0 0.75rem;
+			margin: 0.33rem 0;
+			.ipt {
+				display: flex;
+				justify-content: space-around;
+				& > span {
+					@include g2-text();
+				}
+				input[type='text'],
+				input[type='number'] {
+					padding: 0 1em;
+					flex-grow: 1;
+				}
+			}
+			.is-danger {
+				font-size: 0.16rem;
+				padding-left: 0.75rem;
+				color: red;
+			}
+		}
+	}
+}

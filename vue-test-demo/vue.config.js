@@ -16,6 +16,8 @@ module.exports = {
 		config.resolve.alias
 			.set('vue$', 'vue/dist/vue.esm.js')
 			.set('@', resolve('src'))
+			.set('@scss', resolve('src/scss'))
+			.set('@public', resolve('public'))
 			.set('assets', resolve('src/assets'))
 			.set('components', resolve('src/components'));
 	},
@@ -41,5 +43,5 @@ module.exports = {
 		}
 	},
 
-	pluginOptions:{}
+	pluginOptions: {}
 };
