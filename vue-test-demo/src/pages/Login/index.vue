@@ -4,7 +4,7 @@
 			<div class="form-item">
 				<div class="ipt">
 					<span>昵称：</span>
-					<input type="text" v-model="userForm.nickName" v-validate="'nickName'" name="nickName"/>
+					<input autocomplete="off" type="text" v-model="userForm.nickName" v-validate="'nickName'" name="nickName"/>
 				</div>
 				<span :class="{ input: true, 'is-danger': errors.has('nickName') }" v-show="errors.has('nickName')">
 					{{ errors.first('nickName') }}
@@ -13,7 +13,7 @@
 			<div class="form-item">
 				<div class="ipt">
 					<span>年级：</span>
-					<input type="text" v-model="userForm.No" v-validate="'No'" name="No"/>
+					<input autocomplete="off" type="text" v-model="userForm.No" v-validate="'No'" name="No"/>
 				</div>
 				<span :class="{ input: true, 'is-danger': errors.has('No') }" v-show="errors.has('No')">
 					{{ errors.first('No') }}
@@ -22,7 +22,7 @@
 			<div class="form-item">
 				<div class="ipt">
 					<span>手机：</span>
-					<input type="text" v-model="userForm.phone" v-validate="'phone'" name="phone" />
+					<input autocomplete="off" type="text" v-model="userForm.phone" v-validate="'phone'" name="phone" />
 				</div>
 				<span :class="{ input: true, 'is-danger': errors.has('phone') }" v-show="errors.has('phone')">
 					{{ errors.first('phone') }}
@@ -31,7 +31,7 @@
 			<div class="form-item">
 				<div class="ipt">
 					<span>邮箱：</span>
-					<input type="text" v-model="userForm.email" v-validate="'email'" name="email" />
+					<input autocomplete="off" type="text" v-model="userForm.email" v-validate="'email'" name="email" />
 				</div>
 				<span :class="{ input: true, 'is-danger': errors.has('email') }" v-show="errors.has('email')">
 					{{ errors.first('email') }}

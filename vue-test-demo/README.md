@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 尝试做一个帮助人开拓视野，了解宇宙，探索未知的h5App

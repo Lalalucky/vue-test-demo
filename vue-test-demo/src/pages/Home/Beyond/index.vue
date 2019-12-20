@@ -22,4 +22,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.beyond{
+	padding: .3rem .3rem 0;
+}
+</style>

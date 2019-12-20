@@ -7,10 +7,9 @@ import store from './store';
 // fastclick
 import FastClick from 'fastclick';
 FastClick.attach(document.body);
-import 'vant/lib/index.css';
 
-// 表单的验证
-import './utils/veevalidate';
+// vant-UI
+import 'vant/lib/index.css';
 
 // 自适应屏幕
 import '@public/lib/flexible.js';
@@ -22,9 +21,11 @@ require('es6-promise').polyfill();
 Es6Promise.polyfill();
 
 // 轮播插件
-import vueSwiper from 'vue-awesome-swiper' ;
-Vue.use(vueSwiper) ;
+import vueSwiper from 'vue-awesome-swiper';
+Vue.use(vueSwiper);
 
+// plugins
+import '@/utils/index.js';
 
 Vue.config.productionTip = false;
 
