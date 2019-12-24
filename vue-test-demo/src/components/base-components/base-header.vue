@@ -1,6 +1,6 @@
 <template>
   <div class="base-header">
-    <div class="header-container flex-box">
+    <div class="header-container">
       <div class="head-left">
         <!-- menu--打开左边菜单栏 -->
         <div class="head-menu">
@@ -49,8 +49,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/scss/helpers/_utils.scss';
 .base-header {
   .header-container {
+    @include m-flex();
+    padding: 0 .3rem;
+    .head-left{
+
+    }
   }
 }
 </style>
