@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import '../themes/index.scss';
+@import '../helpers/_utils.scss';
+@import '../helpers/_text.scss';
+
+.weui-toast__content {
+  color: #fff;
+}
+
+// 修复上拉加载更多问题
+.xs-plugin-pullup-container {
+  text-align: center;
+  @include g2-text();
+  line-height: 40px;
+}
+
+.weui-grids.vux-grid-no-lr-borders {
+  &::before {
+    border-top: none;
+  }
+  &::after {
+    border-bottom: none;
+  }
+  .weui-grid.vux-grid-item-no-border {
+    &::before {
+      border-top: none;
+    }
+    &::after {
+      border-bottom: none;
+    }
+  }
+}
+
+.g2-search {
+  .weui-search-bar__label {
+    position: absolute;
+    left: 0.133333rem;
+    text-align: left;
+    line-height: 0.693333rem;
+  }
+}
+.g2-vux-search {
+  .weui-search-bar {
+    padding: 0.24rem 0.266667rem;
+    .weui-search-bar__input {
+      height: 0.8rem;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.g2-checker {
+  position: relative;
+  width: 100%;
+  &.is-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .g2-checker-item {
+      flex: 0 0 33.33%;
+    }
+  }
+}
+.g2-checker-item {
+  text-align: center;
+  margin-top: 0.213333rem;
+  &:last-child {
+    margin-bottom: 0.213333rem;
+  }
+  .vux-checker-item {
+    position: relative;
+    @include font-dpr(12px);
+    background: #fff;
+    padding: 0.16rem 0.266667rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    border: 1px solid #eee;
+    &.is-selected {
+      color: $primary-6;
+      border-color: $primary-6;
+    }
+  }
+}
+
+// 提供 textarea 上下两行样式
+.g2-textarea-column {
+  flex-direction: column;
+  .weui-label {
+    @include g2-text();
+  }
+  .weui-cell__bd {
+    width: 100%;
+  }
+}
+
+.weui-cell.g2-cell-column {
+  flex-direction: column;
+  .weui-cell__hd {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .weui-label {
+      flex: 1;
+      width: 100%;
+    }
+    .g2-icon {
+      flex: 0 0 auto;
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+  .weui-cell__bd {
+    width: 100%;
+  }
+  .upload-image-list > .upload-image-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    .upload-image-list-item__image {
+      flex: 0 0 1.28rem;
+      width: 1.28rem;
+      height: 1.28rem;
+      border-radius: 0.133333rem;
+    }
+    .upload-image-list-item__content {
+      flex: 1 1 auto;
+    }
+  }
+}
+.weui-cell.vux-x-textarea {
+  display: flex;
+  flex-direction: column;
+  .weui-cell__bd {
+    width: 100%;
+  }
+}

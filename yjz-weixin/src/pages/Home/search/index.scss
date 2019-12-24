@@ -1,0 +1,186 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+$g2-search--header-icon-width: 0.96rem;
+
+.yjz-home {
+  .class-search {
+      height: 100%;
+      overflow-y: hidden;
+    background-color: #fff;
+    position: relative;
+    .g2-header-fixed {
+      height: 1.333rem;
+    }
+    .g2-search {
+      z-index: 21;
+      padding: 0;
+      &.is-open {
+        .search-header {
+          background-color: #fff;
+        }
+      }
+      .search-header {
+        padding: 0.24rem 0.266667rem;
+        width: 100%;
+        display: flex;
+        //   justify-content: center; /* 水平居中 */
+        flex-direction: row;
+        .icon-fanhui {
+          width: 0.613333rem;
+          position: absolute;
+          left: 0.026667rem;
+          @include font-dpr(20px);
+          top: 0.384rem;
+        }
+        .search-header-input {
+          flex: 1;
+          display: flex;
+          width: 100%;
+          position: relative;
+          left: 0.32rem;
+          .cancel {
+            display: inline-block;
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            right: 0;
+          }
+          i {
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            line-height: 0.8rem;
+            text-align: center;
+            top: 0;
+            color: $base--color-text-minor;
+            &.search-header-input-right {
+              right: 0;
+              top: 0;
+              @include font-dpr(16px);
+            }
+          }
+          .search-header__input {
+            width: 100%;
+            border: none;
+            background-color: $base--background;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            border-radius: 0.4rem;
+            padding: 0 0.96rem;
+            box-sizing: border-box;
+            outline: none;
+            -webkit-appearance: none;
+            &:active,
+            &:focus {
+              border: 1px solid;
+              border-color: $primary-6;
+              border-radius: 0.4rem;
+            }
+          }
+        }
+
+        .search-header-input-right {
+          float: right;
+          width: $g2-search--header-icon-width;
+          text-align: center;
+        }
+      }
+
+      .header-actions2 {
+        background-image: url('~@public/image/home_law/logo.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+      }
+      .header-actions1 {
+        text-align: center;
+        line-height: 0.6133rem;
+        margin-left: 0.333rem;
+      }
+      .header-actions {
+        display: inline-block;
+        //   margin-right: 0.333rem;
+        margin-top: 0.093333rem;
+        width: 0.613333rem;
+        height: 0.613333rem;
+        //   border-radius: 50%;
+      }
+      .g2-search-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: $base--header-height;
+        background-color: $base--background;
+        display: inline-block;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        transform-origin: center top;
+      }
+
+      .g2-search-prompt {
+        margin-top: 1.333333rem;
+        .g2-icon {
+          height: 1.866667rem;
+          width: 1.866667rem;
+          margin: 0 auto 0.266667rem;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          i {
+            @include font-dpr(60px);
+            color: $base--color-text-minor;
+          }
+        }
+        .g2-text-info {
+          text-align: center;
+          @include font-dpr(14px);
+        }
+      }
+    }
+  }
+  .search-courses {
+    //   position: relative;
+    margin-top: 1.35rem;
+    border-top: 1px solid #f6f6fb;
+    width: 100%;
+    .hot-search,
+    .search-history {
+      padding: 0 0.387rem;
+      .name {
+        margin-top: 0.533rem;
+        font-size: 0.4rem;
+        color: #2c2c35;
+      }
+      .content {
+        margin-top: 0.12rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .conten-item {
+          margin-top: 0.297rem;
+          margin-left: 0.297rem;
+          padding: 0.227rem 0.293rem;
+          color: #7b8196;
+          font-size: 0.32rem;
+          background-color: #f6f6fb;
+          border-radius: 0.373rem;
+        }
+      }
+    }
+    .search-history {
+      margin-top: 1.57rem;
+      .icon-shanchu{
+        width: 0.613333rem;
+        position: absolute;
+        
+        @include font-dpr(20px);
+        right: 0.384rem;
+      }
+    }
+  }
+}

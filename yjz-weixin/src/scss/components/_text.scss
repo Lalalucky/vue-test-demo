@@ -1,0 +1,199 @@
+@charset 'UTF-8';
+
+@import '~@scss/themes/index.scss';
+@import '~@scss/helpers/_text.scss';
+
+$base--font-blod: 700;
+$base--font-size: 14px;
+$base--font-size__medium: 16px;
+$base--font-size__small: 12px;
+$base--line-height: 22px;
+$base--line-height__small: 20px;
+$base--color-subheader: rgba(0, 0, 0, 0.85);
+$base--opacity: 0.45;
+
+/*******************************************************************************
+    所有的标题请按照下面的规则进行搭建。
+********************************************************************************/
+.g2-text-header {
+  border: none;
+
+  margin: calc(32px - 0.14285714em) 0 0.213333rem;
+  padding: 0 0;
+  font-family: $base--font-family;
+  font-weight: $base--font-blod;
+  line-height: 1.28571429;
+  text-transform: none;
+  color: rgb(51, 51, 51);
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // 页面标题  一个页面只能存在一个
+  h1 & {
+    @include header-h1();
+  }
+
+  // 作为页面第二级标题，可能在一个页面中使用到多个二级标题。
+  h2 & {
+    @include header-h2();
+  }
+
+  // 页面第三级标题，嵌套在二级标题下使用。
+  h3 & {
+    @include header-h3();
+  }
+
+  // 页面第四级标题，嵌套在三级标题下使用。
+  h4 & {
+    @include header-h4();
+  }
+
+  // 页面第五级标题，嵌套在四级标题下使用。
+  h5 & {
+    @include header-h5();
+  }
+
+  /*******************************
+            Size
+  *******************************/
+
+  &.is-huge {
+    @include header-h1();
+  }
+  &.is-large {
+    @include header-h2();
+  }
+  &.is-medium {
+    @include header-h3();
+  }
+  &.is-small {
+    margin: 0.106667rem 0;
+    @include header-h4();
+  }
+  &.is-tiny {
+    @include header-h5();
+  }
+
+  /*******************************
+            disabled
+  *******************************/
+  &.is-disabled {
+    opacity: 0.45;
+  }
+
+  &.is-inverse {
+    color: #fff;
+  }
+}
+
+.g2-text-subheader {
+  display: block;
+  font-weight: $base--font-family;
+  font-size: $base--font-size;
+  line-height: $base--line-height;
+  color: $base--color-subheader;
+
+  &.is-inverse {
+    color: #fff;
+  }
+}
+
+/*******************************************************************************
+      正文中大部分由段落组成。段落的行高为22px。段落间在垂直方向上有14px边距。
+********************************************************************************/
+
+.g2-text,
+p {
+  color: $base--color-text;
+  font-size: $base--font-size;
+  line-height: $base--line-height;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+
+  /*******************************
+          lead 突出的段落
+  *******************************/
+  &.is-lead {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: $base--font-size__medium;
+  }
+
+  /*******************************
+          描述文本
+  *******************************/
+  &.is-description {
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+/*******************************************************************************
+      small文本字体只有正常字体大小的85%，通常为11.9px。
+********************************************************************************/
+
+small,
+.g2-text.is-small {
+  color: $base--color-text;
+  font-size: $base--font-size__small;
+  line-height: $base--line-height__small;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/*******************************************************************************
+       超链接具有不同的颜色以区别其他文本。
+********************************************************************************/
+.g2-link,
+a {
+  color: $primary-6;
+  @include font-dpr(15px);
+  line-height: $base--line-height;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-8;
+    text-decoration: none;
+  }
+}
+
+.g2-text-header,
+.g2-text {
+  &.is-primary {
+    color: $primary-6;
+  }
+  &.is-red {
+    color: $red-6;
+  }
+}
+
+.g2-title {
+  border: none;
+  font-family: $base--font-family;
+  font-weight: $base--font-blod;
+  line-height: 1.28571429;
+  text-transform: none;
+  color: rgb(51, 51, 51);
+  @include font-dpr(22px);
+
+  &.is-inverse {
+    color: #fff;
+  }
+}
+
+.g2-text-info {
+  border: none;
+  font-family: $base--font-family;
+  line-height: 1.28571429;
+  text-transform: none;
+  color: #999;
+  @include font-dpr(12px);
+
+  &.is-inverse {
+    color: #fff;
+  }
+}

@@ -1,0 +1,67 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+@mixin g2-text {
+  @include font-dpr(14px);
+  color: rgb(102, 102, 102);
+  text-align: left;
+  line-height: 1.4;
+}
+
+@mixin g2-text-btn {
+  @include font-dpr(15px);
+  color: rgb(51, 51, 51);
+  text-align: left;
+  line-height: 1.4;
+}
+
+.g2-notice {
+  background-color: transparent;
+  padding: 0 0.4rem;
+
+  & {
+    padding-top: 0.533333rem;
+  }
+
+  .notice-time {
+    text-align: center;
+    .g2-time {
+      display: inline-block;
+      background-color: #d2d2d2;
+      border-radius: 0.053333rem;
+      color: #fff;
+      @include font-dpr(12px);
+      min-width: 1.066667rem;
+      padding: 0.106667rem 0.213333rem;
+    }
+  }
+  .g2-card {
+    margin-top: 0.266667rem;
+    .vux-card-content {
+      padding: 0.4rem 0.266667rem 0.666667rem;
+    }
+    .card-header{
+      &::after{
+        display: none;
+      }
+    }
+    .card-header > div {
+      @include utils-single-row();
+    }
+    .card-content {
+      @include g2-text();
+      @include utils-multi-row();
+      width: 8.666667rem;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      margin: 0 0.266667rem;
+      padding: 0.4rem 0;
+      @include g2-text();
+      @include g2-border-top();
+    }
+  }
+}

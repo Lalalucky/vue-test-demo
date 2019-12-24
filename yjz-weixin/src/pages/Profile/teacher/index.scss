@@ -1,0 +1,284 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/themes/index.scss';
+
+$font-color: #2c2c35;
+$active-color: #f54305;
+$title-color: #505050;
+$bg-color: #f87f55;
+.user-info {
+  background: #fff;
+  .up-stage {
+    padding: 0.933333rem 0.533333rem 0 0.533333rem;
+    .swiper-container {
+      width: 8.933333rem;
+      height: 11.573333rem;
+      background: #fff;
+      box-shadow: 0 0 0.133333rem 0 rgba(162, 136, 126, 0.38);
+      border-radius: 0.266667rem;
+      .swiper-wrapper {
+        .swiper-slide {
+          position: relative;
+          .restrain {
+            padding: 0.16rem 0.466667rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: scroll;
+            .col-title {
+              width: 2.826667rem;
+              margin: 0 auto;
+              margin-top: 0.4rem;
+              height: 0.8rem;
+              line-height: 0.8rem;
+              text-align: center;
+              background: $bg-color;
+              border-radius: 0.4rem;
+              font-size: 0.373333rem;
+              color: #fff;
+            }
+            .avator {
+              text-align: center;
+              img {
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
+              }
+            }
+            .name {
+              margin-top: 0.426667rem;
+              margin-bottom: 0.32rem;
+              font-size: 0.453333rem;
+              color: $active-color;
+              text-align: center;
+            }
+            .sex-age {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: $font-color;
+              span {
+                font-size: 0.373333rem;
+                &:nth-child(2) {
+                  width: 2px;
+                  height: 0.346667rem;
+                  background: $font-color;
+                  margin: 0 0.266667rem;
+                }
+              }
+            }
+            .info-display {
+              margin-top: 0.413333rem;
+              .item {
+                display: flex;
+                line-height: 0.373333rem;
+                margin-top: 0.586667rem;
+                .title {
+                  width: 1.493333rem;
+                  font-size: 0.373333rem;
+                  color: $title-color;
+                  font-weight: bold;
+                  display: flex;
+                  justify-content: space-around;
+                  margin-right: 0.48rem;
+                }
+                & > div::nth-child(2) {
+                  color: $title-color;
+                  font-size: 0.346667rem;
+                }
+              }
+            }
+          }
+        }
+        .simply-instr{
+          .restrain{
+            padding: .56rem 0.466667rem 0.16rem;
+          }
+        }
+        .teacher-summary {
+          .summary-data {
+            margin-top: 0.52rem;
+            .sub-title {
+              font-size: 0.4rem;
+              color: $font-color;
+            }
+            .data-list {
+              display: flex;
+              flex-wrap: wrap;
+              & > li {
+                width: 3.853333rem;
+                height: 1.906667rem;
+                margin-top: 0.293333rem;
+                .item {
+                  padding: 0.506667rem 0 0.493333rem;
+                  text-align: center;
+                  & > div:nth-child(1) {
+                    font-size: 0.346667rem;
+                    color: $title-color;
+                    margin-bottom: 0.24rem;
+                  }
+                  & > div:nth-child(2) {
+                    font-size: 0.426667rem;
+                    font-weight: bold;
+                    color: $active-color;
+                  }
+                }
+                &:nth-child(odd) {
+                  margin-right: 0.266667rem;
+                }
+              }
+            }
+          }
+          .lesson-summary {
+            .fa-date-picker {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-bottom: 0.106667rem;
+              .title {
+                font-size: 0.4rem;
+                color: $font-color;
+              }
+              .user-handle {
+                .user-select {
+                  .vux-no-group-title {
+                    margin: 0;
+                    span {
+                      width: 0.64rem;
+                      height: 0.746667rem;
+                      text-align: center;
+                      line-height: 0.746667rem;
+                      font-size: 0.32rem;
+                      border: solid 1px #e7e7f0;
+                      &:nth-child(1) {
+                        border-radius: 0.106667rem 0px 0px 0.106667rem;
+                      }
+                      &:nth-child(2) {
+                        border-radius: 0px 0.106667rem 0.106667rem 0px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .con-form {
+              .list-wrap {
+                display: flex;
+                padding: 0.133333rem 0;
+                border-top: 1px solid #e7e7f0;
+                li {
+                  width: 1.893333rem;
+                  height: 0.933333rem;
+                  border-radius: 0.053333rem;
+                  background-color: #e7e7f0;
+                  .item {
+                    padding: 0.055rem 0;
+                    text-align: center;
+                    & > div:nth-child(1) {
+                      font-size: 0.28rem;
+                      color: $title-color;
+                      margin-bottom: 0.12rem;
+                    }
+                    & > div:nth-child(2) {
+                      font-size: 0.24rem;
+                      font-weight: bold;
+                      color: $active-color;
+                    }
+                  }
+                  &:not(:last-child) {
+                    margin-right: 0.133333rem;
+                  }
+                }
+              }
+              .fake-form {
+                .form-head {
+                  display: flex;
+                  background-color: #f6f6fb;
+                  li {
+                    width: 1.2rem;
+                    line-height: 0.8rem;
+                    text-align: center;
+                    font-size: 0.32rem;
+                    color: #2c2c35;
+                    &:nth-child(1) {
+                      width: 1.973333rem;
+                    }
+                  }
+                }
+                .form-tbody {
+                  li {
+                    display: flex;
+                    &:not(:last-child) {
+                      border-bottom: 1px solid #e7e7f0;
+                    }
+                    span {
+                      width: 1.2rem;
+                      line-height: 0.8rem;
+                      text-align: center;
+                      color: #7b8196;
+                      &:nth-child(1) {
+                        width: 1.973333rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .related-lesson {
+          .data-list {
+            li {
+              display: flex;
+              padding: 0.2rem 0;
+              img {
+                width: 2.666667rem;
+                height: 1.733333rem;
+                background-color: #aeafc0;
+                border-radius: 0.133333rem;
+                margin-right: .253333rem;
+              }
+              .lesson-info{
+                .lesson-name{
+                  min-height: 1.2rem;
+                  font-size: .373333rem;
+                  color: $font-color;
+                  line-height: .48rem;
+                }
+                .total-sub{
+                  font-size: .346667rem;
+                  color: #aeafc0;
+                }
+              }
+              &:not(:last-child) {
+                border-bottom: 1px solid #e7e7f0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .devides {
+      ul {
+        padding: 0.693333rem 2rem 0.52rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          font-size: 0.346667rem;
+          color: $font-color;
+          line-height: 0.373333rem;
+          &.active {
+            font-size: 0.4rem;
+            color: $active-color;
+          }
+        }
+      }
+    }
+  }
+}

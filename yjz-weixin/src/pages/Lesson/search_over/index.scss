@@ -1,0 +1,321 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+$g2-search--header-icon-width: 0.96rem;
+
+.yjz-home {
+  .class-search {
+    height: 100%;
+    overflow-y: hidden;
+    background-color: #fff;
+    position: relative;
+    .g2-header-fixed {
+      height: 1.333rem;
+    }
+    .lesson-teacher-tab {
+      height: 1.6rem;
+      background-color: #fff;
+      position: relative;
+      top: 1.6rem;
+      z-index: 222;
+    .vux-tab .vux-tab-item {
+      background: none;
+    }
+    .vux-tab .vux-tab-item.vux-tab-selected {
+      color: #2c2c35 !important;
+    }
+ 
+      .vux-tab-ink-bar {
+        background-color: #f54305;
+     
+      }
+    }
+    .g2-search {
+      z-index: 21;
+      padding: 0;
+      &.is-open {
+        .search-header {
+          background-color: #fff;
+        }
+      }
+      .search-header {
+        padding: 0.24rem 0.266667rem;
+        width: 100%;
+        display: flex;
+        //   justify-content: center; /* 水平居中 */
+        flex-direction: row;
+        .icon-fanhui {
+          width: 0.613333rem;
+          position: absolute;
+          left: 0.026667rem;
+          @include font-dpr(20px);
+          top: 0.384rem;
+        }
+        .search-header-input {
+          flex: 1;
+          display: flex;
+          width: 100%;
+          position: relative;
+          left: 0.32rem;
+          .cancel {
+            display: inline-block;
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            right: 0;
+          }
+          i {
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            line-height: 0.8rem;
+            text-align: center;
+            top: 0;
+            color: $base--color-text-minor;
+            &.search-header-input-right {
+              right: 0;
+              top: 0;
+              @include font-dpr(16px);
+            }
+          }
+          .search-header__input {
+            width: 100%;
+            border: none;
+            background-color: $base--background;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            border-radius: 0.4rem;
+            padding: 0 0.96rem;
+            box-sizing: border-box;
+            outline: none;
+            -webkit-appearance: none;
+            &:active,
+            &:focus {
+              border: 1px solid;
+              border-color: $primary-6;
+              border-radius: 0.4rem;
+            }
+          }
+        }
+
+        .search-header-input-right {
+          float: right;
+          width: $g2-search--header-icon-width;
+          text-align: center;
+        }
+      }
+
+      .header-actions2 {
+        background-image: url('~@public/image/home_law/logo.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+      }
+      .header-actions1 {
+        text-align: center;
+        line-height: 0.6133rem;
+        margin-left: 0.333rem;
+      }
+      .header-actions {
+        display: inline-block;
+        //   margin-right: 0.333rem;
+        margin-top: 0.093333rem;
+        width: 0.613333rem;
+        height: 0.613333rem;
+        //   border-radius: 50%;
+      }
+      .g2-search-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: $base--header-height;
+        background-color: $base--background;
+        display: inline-block;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        transform-origin: center top;
+      }
+
+      .g2-search-prompt {
+        margin-top: 1.333333rem;
+        .g2-icon {
+          height: 1.866667rem;
+          width: 1.866667rem;
+          margin: 0 auto 0.266667rem;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          i {
+            @include font-dpr(60px);
+            color: $base--color-text-minor;
+          }
+        }
+        .g2-text-info {
+          text-align: center;
+          @include font-dpr(14px);
+        }
+      }
+    }
+  }
+  .nolist {
+    margin-top: 1.35rem;
+    width: 100%;
+    height: 7.013rem;
+    text-align: center;
+    position: relative;
+    line-height: 1.8;
+    div {
+      width: 100%;
+      position: absolute;
+      bottom: 0rem;
+      p {
+        color: #7b8196;
+        font-size: 0.373rem;
+      }
+    }
+  }
+  .search-coursesBox {
+    //   position: relative;
+    margin-top: 1.35rem;
+    width: 100%;
+    .vux-tab-ink-bar {
+      background-color: #f54305 !important;
+      width: 0.533rem;
+    }
+    .newClass {
+      padding: 0 0.4rem 0.533rem 0.4rem;
+      width: 100%;
+      background-color: #fff;
+
+      margin-top: 0.213rem;
+      padding-top: 0.266667rem;
+    }
+    .sizing {
+      box-sizing: border-box;
+    }
+    .recommended {
+      border-top: 1px solid #f6f6fb;
+      .recommended-box {
+        .box-item {
+          position: relative;
+          .recommended-up {
+            display: flex;
+            justify-content: flex-start;
+            .recommend-image {
+              width: 3.84rem;
+              height: 2.16rem;
+              background-color: #aeafc0;
+              border-radius: 0.107rem 0.133rem 0.133rem 0.133rem;
+              img {
+                border-radius: 0.107rem 0.133rem 0.133rem 0.133rem;
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .recommend-name {
+              width: calc(100% - 4.12rem);
+              margin-left: 0.28rem;
+              .recommend-desc {
+                font-size: 0.427rem;
+                color: #2c2c35;
+                line-height: 1.4;
+                width: 4.24rem;
+              }
+              .recommend-teacher {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 0.4rem;
+
+                .teacher-image {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    color: #2c2c35;
+                    font-size: 0.32rem;
+                    display: inline-block;
+                    margin-left: 0.066667rem;
+                  }
+                  div {
+                    vertical-align: middle;
+                    display: inline-block;
+                    width: 0.533rem;
+                    height: 0.533rem;
+                    border-radius: 50%;
+                    text-align: right;
+                    background-color: #aeafc0;
+                    img {
+                      width: 100%;
+                      border-radius: 50%;
+                      height: 100%;
+                    }
+                  }
+                }
+                .jieshu {
+                  color: #2c2c35;
+                  font-size: 0.32rem;
+                }
+              }
+            }
+          }
+          .recommended-down {
+            padding: 0.427rem 0;
+            display: flex;
+            justify-content: space-between;
+            .xuexi {
+              color: #aeafc0;
+              font-size: 0.32rem;
+            }
+            .count {
+              color: #f54305;
+              font-size: 0.4rem;
+            }
+          }
+        }
+   
+        .box-item + .box-item {
+          margin-top: 0.32rem;
+        }
+        .box-item::after {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          width: 100%;
+          height: 1px;
+          border-bottom: 1px solid #f6f6fb;
+        }
+        .box-item:last-child::after {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .tupian{
+    width: 5.946667rem;
+    height: 3.426667rem;
+    position: absolute;
+    top: 4.666667rem;
+    left: 50%;
+    transform: translateX(-50%);
+    // z-index: 999;
+    text-align: center;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    div{
+      font-family: PingFang-SC-Medium;
+      font-size: .373333rem;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #7b8196;
+    }
+  }
+}

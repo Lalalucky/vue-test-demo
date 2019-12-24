@@ -1,0 +1,30 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/themes/index.scss';
+
+.g2-notice-detail {
+  text-align: center;
+  padding: 0 0.4rem;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+  }
+  .notice-detail-title {
+    padding: 0.8rem 0 0 0;
+    
+  }
+
+  .notice-detail-sub {
+    padding: 0.266667rem 0 0 0;
+    @include g2-text-sub();
+    span {
+      padding: 0 .106667rem;
+    }
+  }
+
+  .notice-detail-content {
+    padding: 0.666667rem 0 0 0;
+    @include g2-text();
+  }
+}

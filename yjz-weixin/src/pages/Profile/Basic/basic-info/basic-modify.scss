@@ -1,0 +1,54 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+* { touch-action: pan-y; } 
+.g2-basic-modify{
+    .g2-basic-modify-body{
+        .vux-cell-value,.weui-input{
+            color:#999;
+        }
+        .title_img{
+            position: absolute;
+            top: 0px;
+            left: 15px;
+            right: 0px;
+            bottom: 0;
+            z-index: 4;
+            opacity: 0; 
+            padding-right: 15px;
+        }
+        .basic-modify-background{
+            img{
+                margin-right: .266667rem!important;
+                margin-top: .186667rem;
+            }
+
+            .weui-cell__ft:after {
+                content: " ";
+                display: inline-block;
+                height: 6px;
+                width: 6px;
+                border-width: 2px 2px 0 0;
+                border-color: #C8C8CD;
+                border-style: solid;
+                -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                position: relative;
+                top: -2px;
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                right:.4rem;
+            }
+        }
+        .weui-cell{
+            height: 1.333333rem;
+            box-sizing: border-box;
+        }
+    }
+
+   
+}

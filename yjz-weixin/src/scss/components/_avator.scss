@@ -1,0 +1,30 @@
+.g2-avator {
+  margin-right: 0.133333rem;
+  display: inline-block;
+  width: 0.853333rem;
+  height: 0.853333rem;
+  border-radius: 500rem;
+  & > img {
+    display: block;
+    max-width: 100%;
+    border-radius: 500rem;
+    height: auto;
+  }
+}
+
+.g2-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+  & + img {
+    display: block;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

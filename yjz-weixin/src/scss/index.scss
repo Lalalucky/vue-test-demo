@@ -1,0 +1,42 @@
+ @charset 'utf-8';
+
+
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
+@import "./base/_vux.scss";
+@import "./base/transition.scss";
+ /*
+    Helpers
+  */
+
+
+ /*
+    Components 
+  */
+@import "./components/_list.scss";
+@import "./components/_avator.scss";
+// 所有的文本样式
+@import "./components/_box.scss";
+@import "./components/_icon.scss";
+@import "./components/_text.scss";
+@import "./components/_cell.scss";
+@import "./components/_card.scss";
+@import "./components/_form-view.scss";
+@import "./components/_panel.scss";
+@import "./components/_footer.scss";
+@import "./components/_nodata.scss";
+
+ /*
+  Pages
+  */
+
+
+ /*
+    Layout 
+  */
+  @import "./layout/index.scss";
+
+
+  .weui-tab__panel{
+    padding-bottom: 0 !important;
+  }

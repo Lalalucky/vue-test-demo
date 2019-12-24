@@ -1,0 +1,92 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+.g2-basic-info {
+  .basic-info-header {
+    padding: 0.4rem $base--padding-horizontal 0.266667rem $base--padding-horizontal;
+    background-color: #2aafc4;
+    box-sizing: border-box;
+    height: 5.333333rem;
+    .basic-icon-bianji{
+        width: .586667rem;height:0.586667rem;
+       background: #fff;
+       display: inline-block;
+    }
+    .basic-self-info {
+      text-align: center;
+      font-weight: normal;
+    }
+    .basic-modify-link {
+      display: inline-block;
+      position: absolute;
+      right: 0.4rem;
+      top: 0.7rem;
+    }
+  }
+  .basic-self-userInfo {
+    // position: absolute;
+    // top: 4rem;
+    z-index: 4;
+    position: relative;
+    height: 2.933333rem;
+    width: 100%;
+    background-color: #fff;
+    .basic-self-userPic {
+      width: 2.8rem;
+      height: 2.8rem;
+      background: #cccccc;
+      border-radius: 50%;
+      position: absolute;
+      left: 3.56rem;
+      top: -1.906667rem;
+      border: 2px #fff solid;
+      img{
+        width: 2.8rem;
+      border-radius: 50%;
+      height: 2.8rem;
+      }
+    }
+    .basic-user-nameInfo {
+      position: relative;
+      top: 1.333333rem;
+      text-align: center;
+
+      .basic-self-userName {
+        // margin-top: .4rem;
+        @include font-dpr(16px);
+      }
+      .basic-self-userCount {
+        margin: 0.213333rem 0 0.4rem 0;
+        @include font-dpr(16px);
+        color: #999;
+      }
+    }
+  }
+  .g2-form-view {
+    padding-top: 0.266667rem;
+    .view-row:after {
+      content: ' ';
+      position: absolute;
+      color: rgba(0, 0, 0, 0.15);
+      transform: scaleY(0.5);
+      bottom: 0;
+      left: -0.4rem;
+      right: -0.4rem;
+      height: 1px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .view-label{
+        color: rgb(153,153,153);
+    }
+    .view-content{
+        color: rgb(51,51,51);
+
+    }
+  }
+  .weui-cells{
+      margin-top: .266667rem;
+  }
+}

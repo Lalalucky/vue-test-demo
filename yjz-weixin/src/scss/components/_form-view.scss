@@ -1,0 +1,129 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+.g2-form-view {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.4rem;
+  &.is-bg {
+    background-color: #fff;
+  }
+
+  // 没有下边框
+  &.is-none-border .view-row {
+    &::after {
+      display: none;
+    }
+  }
+  // content的对齐方式  默认为右对齐
+  &.left .view-row {
+    justify-content: flex-start;
+    .view-label {
+      flex: 0 0 auto;
+      padding: 0.106667rem 0.213333rem 0.106667rem 0;
+    }
+  }
+  .view-row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include g2-border-bottom();
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    .view-label,
+    .view-content {
+      @include g2-text();
+      min-height: 1.333333rem;
+      line-height: 1.333333rem;
+      &.is-multi {
+        line-height: 1.47;
+      }
+    }
+
+    &.is-multi {
+      align-items: flex-start;
+      .view-label {
+        flex: 0 0 auto;
+        padding: 0.106667rem 0.213333rem 0.106667rem 0;
+        line-height: 1.47;
+      }
+      .view-content {
+        line-height: 1.47;
+        padding: 0.106667rem 0;
+      }
+    }
+  }
+}
+
+.g2-group {
+  .weui-cells__title {
+    @include g2-text();
+    height: 0.586667rem;
+    padding: 0.24rem 0.266667rem 0;
+    color: #999;
+    position: relative;
+  }
+
+  .weui-cell {
+    & > div:first-child > p,
+    .vux-cell-bd > p {
+      margin-bottom: 0;
+    }
+    & > div:first-child > p,
+    & > div:first-child > .weui-label,
+    .weui-label,
+    .vux-label {
+      @include g2-text();
+      color: #333333;
+      @include font-dpr(16px);
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    .vux-cell-value,
+    .weui-input,
+    .weui-textarea {
+      @include g2-text();
+      color: #333;
+      @include font-dpr(14px);
+
+      &::-webkit-input-placeholder {
+        color: #aab2bd;
+      }
+    }
+    // placeholder
+    .vux-cell-placeholder {
+      color: #aab2bd;
+      @include font-dpr(14px);
+    }
+
+    // 展开
+
+    &.weui-group-spread {
+      justify-content: center;
+      color: $primary-6;
+      @include font-dpr(14px);
+      i {
+        margin-left: 0.213333rem;
+        @include font-dpr(14px);
+      }
+    }
+  }
+
+  .weui-group-spread-cell > .weui-cell:first-child {
+    @include g2-border-top();
+    &:after {
+      left: 15px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/themes/index.scss';
+$font-color: #2c2c35;
+
+.user-card {
+  padding: 0 0.4rem;
+  background: url('~@public/image/home_law/profile/bg.png') no-repeat top;
+  background-size: 100%;
+  .head-msg {
+    padding-top: 0.426667rem;
+    .user-info {
+      display: flex;
+      color: #fff;
+      margin-bottom: 0.413333rem;
+      img {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        margin-right: 0.48rem;
+      }
+      .right {
+        div:nth-child(1) {
+          height: 0.426667rem;
+          font-size: 0.453333rem;
+          margin-top: 0.36rem;
+          margin-bottom: 0.173333rem;
+        }
+        div:nth-child(1) {
+          font-size: 0.346667rem;
+        }
+      }
+    }
+    // 诱导注册
+    .improve-lv {
+      padding: 0.493333rem 0.546667rem;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 6px 8px 0px rgba(218, 216, 215, 0.46);
+      border-radius: 20px;
+      background: #fff;
+      .member {
+        width: 0.96rem;
+        height: 0.84rem;
+        margin-right: 0.826667rem;
+      }
+      .ad {
+        width: 3.546667rem;
+        margin-right: 0.64rem;
+        font-size: 0.346667rem;
+        color: #27323f;
+      }
+      .btn {
+        width: 2.133333rem;
+        height: 1.04rem;
+        background: url('~@public/image/home_law/profile/kaitong.png') no-repeat center;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+    }
+  }
+  // 快捷入口
+  .quick-enter {
+    display: flex;
+    margin-top: 0.453333rem;
+    margin-bottom: 0.32rem;
+    & > div {
+      width: 4.44rem;
+      background-color: #ffffff;
+      border-radius: 0.24rem;
+      padding-top: 0.426667rem;
+      padding-bottom: 0.28rem;
+      &:not(:last-child) {
+        margin-right: 0.32rem;
+      }
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 0.48rem;
+          height: 0.52rem;
+          margin-right: 0.253333rem;
+        }
+        span {
+          font-size: 0.373333rem;
+          color: #333;
+        }
+      }
+      .bottom {
+        margin-top: 0.333333rem;
+        font-size: 0.32rem;
+        color: #999;
+        text-align: center;
+      }
+    }
+  }
+  .already-view{
+    margin-bottom: .373333rem;
+  }
+  .enters{
+    padding-bottom: .373333rem;
+  }
+}

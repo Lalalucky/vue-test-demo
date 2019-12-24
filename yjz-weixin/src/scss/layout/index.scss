@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import '../themes/index.scss';
+@import '../helpers/_mixins.scss';
+@import '../helpers/_utils.scss';
+@import '../helpers/_config.scss';
+
+/*********************************************
+  微信公众号 页面级样式
+
+  所有的页面请用 g2-page-view 进行包裹
+
+  .g2-page-view
+    - .g2-header-fixed
+    - .g2-page-view-content
+    - .g2-page-view-footer
+
+**********************************************/
+
+$view-header--height: 1.28rem;
+
+.g2-page-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  // min-height: 100%;
+  background-color: #f4f4f4;
+  -webkit-transition: transform 0.25s linear, right 0.25s linear;
+  transition: transform 0.25s linear, right 0.25s linear;
+
+  overflow-y: auto;
+
+  .g2-header-fixed:not(.is-hide) + .g2-page-view-container {
+    margin-top: $view-header--height + 0.266667rem;
+  }
+
+  .g2-page-view-nodata,
+  .g2-header-fixed:not(.is-hide) + .g2-page-view-nodata {
+    text-align: center;
+    padding-top: 1.8rem;
+    .g2-icon {
+      text-align: center;
+      height: 3.466667rem;
+      width: auto;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+  .g2-header-fixed:not(.is-hide) + .g2-page-view-nodata {
+    margin-top: $view-header--height + 0.266667rem;
+  }
+
+  .g2-page-action {
+    height: 1.333333rem;
+    width: 1.333333rem;
+    line-height: 1.333333rem;
+    border-radius: 50%;
+    text-align: center;
+    @include font-dpr(22px);
+    background-color: #2aa7dc;
+    color: #fff;
+    position: fixed;
+    bottom: 1.333333rem;
+    right: 1.066667rem;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 0px 4px 0px #2aa7dc;
+  }
+}
+.g2-page-action {
+  .g2-action {
+    &.action__add {
+    }
+  }
+}
+
+
+.g2-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+
+  align-items: center;
+  background-color: #fff;
+  height: $view-header--height;
+  padding: 0 0.266667rem;
+  justify-content: flex-end;
+
+  .header-search {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    padding-left: 0.266667rem;
+    background: #f7f7f7;
+    border-radius: 0.213333rem;
+    @include font-dpr(12px);
+    color: #999;
+  }
+  .header-actions {
+    flex: 0 0 0.8rem;
+    display: flex;
+
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 0.213333rem;
+  }
+
+  &.is-vux-search {
+    padding: 0;
+    & > .g2-search {
+      height: 100%;
+      .weui-search-bar {
+        padding: 0.24rem 0.266667rem;
+      }
+      .weui-search-bar__input {
+        height: 0.8rem;
+        line-height: 0.6rem;
+        border-radius: 0.133333rem;
+        padding: 0;
+        padding-left: 0.053333rem;
+      }
+    }
+  }
+}

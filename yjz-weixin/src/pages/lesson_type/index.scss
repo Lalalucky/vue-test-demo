@@ -1,0 +1,304 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+$g2-search--header-icon-width: 0.96rem;
+
+.yjz-home {
+  .lesson-typeAll {
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    .g2-header-fixed {
+      height: 1.333rem;
+    }
+    .g2-search {
+      z-index: 21;
+      padding: 0;
+      &.is-open {
+        .search-header {
+          background-color: #fff;
+        }
+      }
+      .search-header {
+        padding: 0.24rem 0.266667rem;
+        width: 100%;
+        display: flex;
+        //   justify-content: center; /* 水平居中 */
+        flex-direction: row;
+        .icon-fanhui {
+          width: 0.613333rem;
+          position: absolute;
+          left: 0.026667rem;
+          @include font-dpr(20px);
+          top: 0.384rem;
+        }
+        .search-header-input {
+          flex: 1;
+          display: flex;
+          width: 100%;
+          position: relative;
+          left: 0.32rem;
+          .cancel {
+            display: inline-block;
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            right: 0;
+          }
+          i {
+            position: absolute;
+            width: 0.96rem;
+            @include font-dpr(20px);
+            line-height: 0.8rem;
+            text-align: center;
+            top: 0;
+            color: $base--color-text-minor;
+            &.search-header-input-right {
+              right: 0;
+              top: 0;
+              @include font-dpr(16px);
+            }
+          }
+          .search-header__input {
+            width: 100%;
+            border: none;
+            background-color: $base--background;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            border-radius: 0.4rem;
+            padding: 0 0.96rem;
+            box-sizing: border-box;
+            outline: none;
+            -webkit-appearance: none;
+            &:active,
+            &:focus {
+              border: 1px solid;
+              border-color: $primary-6;
+              border-radius: 0.4rem;
+            }
+          }
+        }
+
+        .search-header-input-right {
+          float: right;
+          width: $g2-search--header-icon-width;
+          text-align: center;
+        }
+      }
+
+      .header-actions2 {
+        background-image: url('~@public/image/home_law/logo.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+      }
+      .header-actions1 {
+        text-align: center;
+        line-height: 0.6133rem;
+        margin-left: 0.333rem;
+      }
+      .header-actions {
+        display: inline-block;
+        //   margin-right: 0.333rem;
+        margin-top: 0.093333rem;
+        width: 0.613333rem;
+        height: 0.613333rem;
+        //   border-radius: 50%;
+      }
+      .g2-search-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: $base--header-height;
+        background-color: $base--background;
+        display: inline-block;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        transform-origin: center top;
+      }
+
+      .g2-search-prompt {
+        margin-top: 1.333333rem;
+        .g2-icon {
+          height: 1.866667rem;
+          width: 1.866667rem;
+          margin: 0 auto 0.266667rem;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          i {
+            @include font-dpr(60px);
+            color: $base--color-text-minor;
+          }
+        }
+        .g2-text-info {
+          text-align: center;
+          @include font-dpr(14px);
+        }
+      }
+    }
+    .weui-tab__panel {
+      padding-bottom: 0 !important;
+    }
+
+    .lesson-live {
+      position: relative;
+      width: 100%;
+      //   height: 5.613rem;
+      .icon-bofang {
+        width: 0.96rem;
+        height: 0.96rem;
+        position: absolute;
+        left: 0.026667rem;
+        @include font-dpr(40px);
+        top: 2.32rem;
+        left: 50%;
+        z-index: 2;
+      }
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .paddingLR {
+      padding: 0 0.4rem;
+      box-sizing: border-box;
+    }
+
+    
+    .lessonBar {
+      box-sizing: border-box;
+      position: absolute;
+      top:1.333rem;
+      bottom: 0;
+      display: flex;
+      border-top: 1px solid #f3f4f8;
+      .container {
+        width: calc(100% - 2.533rem);
+        padding-top: 0.307rem;
+        padding-left: 0.4rem;
+        box-sizing: border-box;
+        height: 100%;
+        .topImage {
+          width: 100%;
+          height: 2.133rem;
+          border-radius: 0.133rem;
+          background-color: #000000;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.133rem;
+          }
+        }
+        .recommended {
+          // .recommended-box {
+            .box-item {
+              position: relative;
+              .recommended-up {
+                display: flex;
+                justify-content: flex-start;
+                .recommend-image {
+                  width: 2.4rem;
+                  height: 1.467rem;
+                  background-color: #aeafc0;
+                  border-radius: 0.133rem;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0.133rem;
+                  }
+                }
+                .recommend-name {
+                  width: calc(100% - 4.12rem);
+                  margin-left: 0.28rem;
+                  .recommend-desc {
+                    font-size: 0.347rem;
+                    color: #2c2c35;
+                    line-height: 1.4;
+                    width: 3.733rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  }
+                  .recommend-teacher {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0.173rem 0;
+
+                    .teacher-image {
+                      display: flex;
+                      align-items: center;
+                      span {
+                        color: #2c2c35;
+                        font-size: 0.32rem;
+                        display: inline-block;
+                        margin-left: 0.066667rem;
+                      }
+                      div {
+                        vertical-align: middle;
+                        display: inline-block;
+                        width: 0.413rem;
+                        height: 0.413rem;
+                        border-radius: 50%;
+                        text-align: right;
+                        background-color: #aeafc0;
+                        img {
+                          width: 100%;
+                          border-radius: 50%;
+                          height: 100%;
+                        }
+                      }
+                    }
+                    .jieshu {
+                      color: #aeafc0;
+                      font-size: 0.293rem;
+                    }
+                  }
+                  .recommended-down {
+                    display: flex;
+                    justify-content: space-between;
+                    .xuexi {
+                      color: #aeafc0;
+                      font-size: 0.293rem;
+                    }
+                    .count {
+                      color: #f54305;
+                      font-size: 0.4rem;
+                    }
+                  }
+                }
+              }
+            }
+            .box-item {
+              padding: 0.427rem 0;
+            }
+
+            .box-item::after {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              content: '';
+              width: 100%;
+              height: 1px;
+              border-bottom: 1px solid #f6f6fb;
+            }
+            .box-item:last-child::after {
+              border-bottom: none;
+            }
+          // }
+        }
+      }
+    }
+  }
+}

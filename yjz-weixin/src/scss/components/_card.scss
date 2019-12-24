@@ -1,0 +1,58 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/themes/index.scss';
+
+.g2-card {
+  & + & {
+    margin-top: 0.266667rem;
+  }
+  .card-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem; // 30px
+    @include font-dpr(15px);
+    color: $base--color-title;
+    .card-header-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .card-header-img {
+      display: inline-block;
+      height: 0.586667rem;
+      width: 0.586667rem;
+      margin-right: 0.266667rem;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #c0bfc4;
+      color: #c0bfc4;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  .card-content {
+    &.home-card-content {
+      margin-left: 0.853333rem;
+    }
+  }
+
+  .card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

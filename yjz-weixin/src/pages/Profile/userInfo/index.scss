@@ -1,0 +1,105 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/themes/index.scss';
+$font-color: #2c2c35;
+
+.user-info {
+  .head-img {
+    padding: 0.36rem 0.4rem;
+    background: #fff;
+    margin-bottom: 0.213333rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .with-img {
+      width: 1.933333rem;
+      height: 1.933333rem;
+      border-radius: 50%;
+      background: #f1f1f1;
+      margin-right: 0.253333rem;
+      position: relative;
+      input {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::-webkit-input-placeholder {
+          direction: rtl;
+        }
+        &:-moz-placeholder {
+          direction: rtl;
+        }
+        &::-moz-placeholder {
+          direction: rtl;
+        }
+        &:-ms-input-placeholder {
+          direction: rtl;
+        }
+      }
+    }
+    .sub {
+      font-size: 0.4rem;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0.4rem;
+      top: 1.186667rem;
+      width: 0.146667rem;
+      height: 0.253333rem;
+      background: url('~@public/image/home_law/profile/icon-right.png');
+      background-size: 100% 100%;
+    }
+  }
+  .user-info-form {
+    padding: 0 0.4rem;
+    background: #fff;
+    .handle-group {
+      .handle-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 1.24rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #e7e7f0;
+        }
+        .sub {
+          width: 2rem;
+          color: $font-color;
+          font-size: 0.4rem;
+        }
+        input {
+          outline: none;
+          border: none;
+          appearance: none;
+          width: 6.654rem;
+          height: 1rem;
+          line-height: 1rem;
+          font-size: 0.346667rem;
+          color: $font-color;
+          text-align: right;
+          &:focus {
+            border: none;
+          }
+        }
+        img {
+          margin-left: 0.25rem;
+          width: 0.146667rem;
+          height: 0.253333rem;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: .533333rem;
+          width: 0.146667rem;
+          height: 0.253333rem;
+          background: url('~@public/image/home_law/profile/icon-right.png');
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}

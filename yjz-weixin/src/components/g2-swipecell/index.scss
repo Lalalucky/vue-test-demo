@@ -1,0 +1,68 @@
+@import '~@scss/helpers/_mixins.scss';
+@import '~@scss/helpers/_utils.scss';
+@import '~@scss/helpers/_text.scss';
+@import '~@scss/helpers/_border.scss';
+@import '~@scss/themes/index.scss';
+
+.g2-swipe-cell {
+  overflow: hidden;
+  position: relative;
+
+  &__left,
+  &__right {
+    top: 0;
+    height: 100%;
+    position: absolute;
+
+    color: #fff;
+    @include font-dpr(14px);
+    height: 100%;
+    display: inline-block;
+    background-color: #f44;
+
+    & > .g2-swipe-cell-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      & > .g2-swipe-cell-action {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 100%;
+        text-align: center;
+        @include g2-border-right(#fff);
+        &:last-child:after {
+          display: none;
+        }
+
+        // 主题色
+        &.is-primary {
+          background-color: $primary-6;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .g2-list &__left,
+  .g2-list &__right {
+    color: #fff;
+    @include font-dpr(14px);
+    height: 100%;
+
+    background-color: #f44;
+  }
+
+  &__left {
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  &__right {
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
